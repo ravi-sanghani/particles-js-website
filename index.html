@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Particles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /*background-color: #121212;*/
+        }
+
+
+        #logo {
+            width: 100px;
+            height: 300px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://bafybeih3ob26vnz52vtakzmfqpg4gougers2lzeoblklon6tke5757m6ia.ipfs.nftstorage.link/" class="logo"
+        id="logo" alt="Logo" style="display: none;">
+
+
+    <script src="https://nextparticle.nextco.de/nextparticle.min.js"></script>
+
+    <script>
+        nextParticle = new NextParticle({
+            image: document.all.logo,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            maxWidth: window.innerWidth * 1,
+            particleGap: 1,
+            noise: 1
+        });
+        window.onresize = function () {
+            if (window.innerWidth > 600) {
+                nextParticle.width = window.innerWidth - 20;
+                nextParticle.height = window.innerHeight - 20;
+                nextParticle.start();
+            }
+        };
+    </script>
+
+    <!-- <canvas width="1516" height="375"></canvas> -->
+
+</body>
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
